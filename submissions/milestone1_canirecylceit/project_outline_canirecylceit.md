@@ -26,14 +26,18 @@ Classification Categories.  Not clear what ideal classification/label strategies
 
 ## Draft Timeline 
 
-- Data pre-processing / EDA
+- Data pre-processing, labeling, EDA
 - Modeling ideas:
   - Initial baseline model results (UNET + SVM)
+  - Tensorflow Object detection API/modles 
   - LeNet style CNN trained from scratch
   - Transfer Learning (ResNet50, MobileNet, InceptionResNetV2, DenseNet)
   - Self-Supervised Learning with Fast.ai and fine tuning desired classification
+- Scalable, back-end cloud infrastracture development
+- UI/UX Ideation; Low/High fidelity wireframing,journey maps, needs/wants selection
 - Best model serialization and API development
 - Web application deployment
+- Strategy development for promotion and comms? Are we going to try to make this public?
 - Any other ideas for intermediate timelines?
 
 ## Datasets and Models considered
@@ -55,6 +59,11 @@ Download here: https://github.com/garythung/trashnet/blob/master/data/dataset-re
 
 ### Drinking Waste Classification
 The dataset contains ~10k images groupped by 4 classes of drinking waste: Aluminium Cans, Glass bottles, PET (plastic) bottles and HDPE (plastic) milk bottles. Pictures were taken with 12 MP phone camera as a part of final year Individual Project at University College London. The dataset used parts of manually collected images from TrashNet.
+
+### Portland State University Recycling Image Classification Dataset 
+Dataset composed of '11,500 image training data of 5 common recycling items' availble from Portland State University
+http://web.cecs.pdx.edu/~singh/rcyc-web/index.html
+
 
 Download: Directly from kaggle https://www.kaggle.com/arkadiyhacks/drinking-waste-classification
 
