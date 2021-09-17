@@ -29,12 +29,12 @@ Classification Categories.  Not clear what ideal classification/label strategies
 - Data pre-processing, labeling, EDA
 - Modeling ideas:
   - Initial baseline model results (UNET + SVM)
-  - Tensorflow Object detection API/modles 
+  - Tensorflow Object detection API/models 
   - LeNet style CNN trained from scratch
   - Transfer Learning (ResNet50, MobileNet, InceptionResNetV2, DenseNet)
   - Self-Supervised Learning with Fast.ai and fine tuning desired classification
 - Scalable, back-end cloud infrastracture development
-- UI/UX Ideation; Low/High fidelity wireframing,journey maps, needs/wants selection
+- UI/UX ideation; Low/High fidelity wireframing,journey maps, needs/wants selection
 - Best model serialization and API development
 - Web application deployment
 - Strategy development for promotion and comms? Are we going to try to make this public?
