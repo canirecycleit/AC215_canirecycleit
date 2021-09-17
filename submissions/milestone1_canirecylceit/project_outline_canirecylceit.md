@@ -1,14 +1,16 @@
 # Project - CanIRecycleIt.com
 
-## Problem Definition(s)
+## Background and Problem Definition(s)
 
-Waste management is one of the most challenging problems to solve in the 21st century. The average American produces 1,704 pounds of garbage per year, roughly three times the global average, according to a [report](https://www.globalcitizen.org/en/content/americans-produce-most-waste/#:~:text=The%20average%20American%20produces%201%2C704,the%20research%20firm%20Verisk%20Maplecroft.) by the research firm Verisk Maplecroft in 2019.
+Waste management is one of the most challenging problems to solve in the 21st century. The average American produces 1,704 pounds of garbage per year, roughly three times the global average, according to a [report](https://www.globalcitizen.org/en/content/americans-produce-most-waste/#:~:text=The%20average%20American%20produces%201%2C704,the%20research%20firm%20Verisk%20Maplecroft.) by the research firm Verisk Maplecroft in 2019. Poor waste management is linked to environmental risks, such as climate change and pollution, and consequent economic harm.
 
-Two main considerations in waste management are:
+To achieve a sustainable future, it is imperative to develop an effective waste management system. Currently, a majority of waste is not recycled and ends up in sanitary landfills. Reasons for this include:
 
 * Consumers placing non-recyclable items into recycling bins which leads to [inefficiencies](https://www.valleywasteservice.com/valley-waste-news/what-happens-if-you-put-non-recyclable-items-into-recycling-4034) in the sorting process.
 
 * Consumers looking to buy recyclable products [may not know if a product is recyclable or not](https://news.slashdot.org/story/21/09/09/153219/california-aims-to-ban-recycling-symbols-on-things-that-arent-recyclable).
+
+In light of these factors, we contribute a platform for consumers that detects and classifies recyclable materials using artificial intelligence and computer vision.
 
 ## Proposed Solution
 
