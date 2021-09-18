@@ -2,11 +2,11 @@
 
 ## Team Members
 
-- Bruno Janota
-- Daniel Olal
-- Daria Zhukova
-- Kevin Hill
-- Javaria Hassan
+* CRO - Chief Recylcing Officer - Bruno Janota
+* CTE - Chief Trash Executive - Daniel Olal
+* CEO - Chief Environmental Officer - Daria Zhukova
+* CSO - Chief Sustainability Officer - Kevin Hill
+* CGO - Chief Green Officer - Javaria Hassan
 
 ## Background and Problem Definition(s)
 
@@ -22,54 +22,52 @@ In light of these factors, we contribute a platform for consumers that detects a
 
 ## Proposed Solution
 
-Build binomial classification model for recylcable/non-recylcable
+We build and deploy a web-based Application that will enable Users to take a picture of an item of trash and identify if it is recylcable or not.  Additionally we will provide the ability for Users to submit additional pictures to further improve model performance over time via incremental data acquisition.  Inference API will be exposed to enable additional integration of image classification functionality into other 3rd party applications if desired (mobile, etc.).
 
-Build multinomial classification for material identification (e.g. plastic. metal, etc.)
+A CNN image classification model will be developed via a training pipeline to identify recylcable and non/recylcable materials.  An additional supporting multinomial classification model may be built to identify material types (e.g. plastic, metal, etc.) as additional feature input and user-explanatory information.
 
-Provide standard data model for upload of labeled images for ongoing classification model build/improvement
+Expectation is that CNN models will take advantage of transfer learning and will be built on `resnet50` (or similar pre-existing architecture) with fine-tuning based on recyclable data-set.
 
-Provide UI (canIrecyclethis.com) and API for real-time inference
+## Draft Timeline
 
-## Project Scope
-
-Classification Categories.  Not clear what ideal classification/label strategies would be to support desired use-cases.
-
-## Draft Timeline 
-
-- Data pre-processing, labeling, EDA
-- Modeling ideas:
-  - Initial baseline model results (PCA or UNET + SVM)
-  - Tensorflow Object detection API/models 
-  - LeNet style CNN trained from scratch
-  - Transfer Learning (ResNet50, MobileNet, InceptionResNetV2, DenseNet)
-  - Self-Supervised Learning with Fast.ai and fine tuning desired classification
-- Scalable, back-end cloud infrastracture development
-- UI/UX ideation; Low/High fidelity wireframing, journey maps, needs/wants selection
-- Best model serialization and API development
-- Web application deployment
+* Data pre-processing, labeling, EDA
+* UI/UX ideation: Wireframing, etc.
+* Modeling approach:
+  * Initial baseline model results (UNET + SVM)
+  * Tensorflow Object detection API/models
+  * LeNet style CNN trained from scratch
+  * Transfer Learning (ResNet50, MobileNet, InceptionResNetV2, DenseNet)
+  * Self-Supervised Learning with Fast.ai and fine tuning desired classification
+* Scalable, back-end Training pipeline development
+* Model performance reporting dashboards
+* Best model serialization and API development
+* Web application deployment (Flask)
 
 ## Datasets and Models considered
 
-- This github repo contains information on different trash/waste related datasets: https://github.com/AgaMiko/waste-datasets-review
-- This github repo contains a literature review of different approaches and performance results on above datasets: https://github.com/majsylw/litter-detection-review
+### Background Assessments
 
-The top contenders for datasets that we can leverage for this project are:
+* [This github repo](https://github.com/AgaMiko/waste-datasets-review) contains information on different trash/waste related datasets.
+* [This github repo](https://github.com/majsylw/litter-detection-review) contains a literature review of different approaches and performance results on above datasets.
 
 ### Waste Classification Data v2
+
 Over 25k images divided into training data - 22564 + 2508 nonrecyclable images and test data - 2513 images + 397 from category nonrecyclable. Three main categories: Organic (O), recyclable (R), and nonrecyclable (N).
 
-Available on Kaggle here: https://www.kaggle.com/techsash/waste-classification-data
+Available on Kaggle [here](https://www.kaggle.com/techsash/waste-classification-data).
 
 ### TrashNet for Specific Material Classification
+
 The TrashNet Classification dataset contains 2467 images from 6 categories: cardboard (393), glass (491), metal (400), paper (584), plastic (472) and trash (127). I think it may be interesting to work with this dataset but it's size may be a challenge and I also think the categories are fairly obvious to an end user (i.e. most users would know if a piece of trash is plastic or metal but the above dataset classes of organic, nonrecyclable, and nonrecyclable may be more interesting for end users).
 
-Download here: https://github.com/garythung/trashnet/blob/master/data/dataset-resized.zip
+Download [here](https://github.com/garythung/trashnet/blob/master/data/dataset-resized.zip).
 
 ### Drinking Waste Classification
+
 The dataset contains ~10k images groupped by 4 classes of drinking waste: Aluminium Cans, Glass bottles, PET (plastic) bottles and HDPE (plastic) milk bottles. Pictures were taken with 12 MP phone camera as a part of final year Individual Project at University College London. The dataset used parts of manually collected images from TrashNet.
 
-### Portland State University Recycling Image Classification Dataset 
-Dataset composed of '11,500 image training data of 5 common recycling items' availble from Portland State University
-http://web.cecs.pdx.edu/~singh/rcyc-web/index.html
+### Portland State University Recycling Image Classification Dataset
 
-Download: Directly from kaggle https://www.kaggle.com/arkadiyhacks/drinking-waste-classification
+Dataset composed of '11,500 image training data of 5 common recycling items' availble from [Portland State University](http://web.cecs.pdx.edu/~singh/rcyc-web/index.html).
+
+Download from kaggle [here](https://www.kaggle.com/arkadiyhacks/drinking-waste-classification).
