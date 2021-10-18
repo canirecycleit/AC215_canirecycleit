@@ -3,3 +3,4 @@ black
 pytest
 matplotlib
 opencv-python
+kaggle

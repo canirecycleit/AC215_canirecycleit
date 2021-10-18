@@ -8,3 +8,5 @@ coverage
 python-dotenv>=0.5.1
 scikit-learn
 tensorflow
+google-cloud-storage
+opencv-python
