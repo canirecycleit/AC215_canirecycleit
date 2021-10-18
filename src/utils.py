@@ -6,6 +6,7 @@ from ctypes import ArgumentError
 
 import kaggle
 import requests
+from google.cloud import storage
 
 
 class HttpDownloader:
@@ -47,6 +48,30 @@ class KaggleDownloader:
     ):
         kaggle.api.authenticate()
         kaggle.api.dataset_download_files(path=dest, dataset=url, unzip=extract)
+
+
+class GoogleCloudStorageDownloader:
+    """Implements download of datasets from Google Cloud Storage"""
+
+    def download(
+        self, url: str, dest: str, extract: bool = False, headers=None, **kwargs
+    ):
+        client = storage.Client.create_anonymous_client()
+        bucket = client.get_bucket(url)
+        blobs = list(bucket.list_blobs())
+
+        if (not os.path.exists(dest)):
+            os.mkdir(dest)
+
+        for blob in blobs:
+            if(not blob.name.endswith("/")):
+                
+                # Create sub-folder if needed:
+                sub_folder = os.path.join(dest, blob.name.split("/")[0])
+                if (not os.path.exists(sub_folder)):
+                    os.mkdir(sub_folder)
+
+                blob.download_to_filename(os.path.join(dest, blob.name))
 
 
 def download_data_file(url: str, dest: str, **kwargs):
