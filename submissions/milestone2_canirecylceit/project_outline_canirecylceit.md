@@ -77,18 +77,36 @@ Download from kaggle [here](https://www.kaggle.com/arkadiyhacks/drinking-waste-c
 
 We explored each of the three potential datasets above and found that each dataset may have potential shortcomings and we may need to sample images from each dataset to be included in a single larger dataset with classes for recyclable material and non-recyclable material.
 
+### Trashnet
+
 Initial performance from a transfer learning classification model on the Trashnet dataset resulted in a validation classification accuracy of about 80% across the 6 material classes in the dataset however, the limited size of this dataset and overall quality may not be sufficient to develop a front-end user application capable of detecting general recyclable materials vs. non-recyclable materials.
 
 Here are a few sample images with respective labels from the trashnet dataset:
-![](./trashnet_sample_imgs.JPG)
+![sample_trash](./trashnet_sample_imgs.JPG)
+
+#### EDA Notebook
+
+EDA and model prototyping for Trashnet can be found [here](../../notebooks/Trashnet_Exploration.ipynb).
+
+### Waste Classification v2
 
 The Waste Classification v2 dataset seems to be the most promising in terms of the number of training images but it also appears to have quite a few mislabeled images in each class upon initial inspection of incorrect predictions. It appears that this data was collected from searching google images but not much post-processing on the raw data collection was done. The initial performance of a Mobilenet classification model to predict between the recyclable, non-recylable, and organic classes resulted in a 86% validation accuracy. 
 
 Here are a few sample images with respective labels from the waste classification v2 dataset:
-![](./waste_classification_sample_imgs.JPG)
+![class_1](./waste_classification_sample_imgs.JPG)
 
 Here is the loss and accuracy curve for the baseline Mobilenet architecture:
-![](./waste_classification_baseline_accuracy.JPG)
+![class_2](./waste_classification_baseline_accuracy.JPG)
 
+#### EDA Notebook
 
-We also experimented with using the Portland State Univerisy Recylcling Image Classification dataset which contained annotated images with bounding boxes for the trash object that we used to fine-tune Yolo v3. 
+EDA and model prototyping for Waste Classification can be found [here](../../notebooks/Waste_Classification_EDA.ipynb).
+
+### (YOLO) Mixed Trash
+
+Given we would like to provide object detection within a live video stream we also tested  real-time object detection using the Portland State Univerisy Recylcling Image Classification dataset which contained annotated images with bounding boxes for the trash object that we used to fine-tune Yolo v3.
+![yolo](./yolo.png)
+
+#### Model Prototyping Notebook
+
+Model prototyping for YOLO detection can be found [here](../../notebooks/yolov5_mixed_trash_data_training_predictions.ipynb).
