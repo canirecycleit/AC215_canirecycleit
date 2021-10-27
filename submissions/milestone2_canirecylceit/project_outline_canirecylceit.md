@@ -104,7 +104,9 @@ EDA and model prototyping for Waste Classification can be found [here](../../not
 
 ### YOLO v5 for Identifying Recycalable Materials in a Live Stream
 
-Given that we would like to provide a way to identify recycalable materials within a live video stream, we also tested real-time object detection using the Portland State Univerisy Recylcling Image Classification dataset which contained annotated images with bounding boxes for the trash object that we used to train Yolo v5. For adopting the model to distinguish between recycalable or not, we used the organic materials dataset out of Waste Classification v2 databank. 
+Given that we would like to provide a way to identify recycalable materials within a live video stream, we also tested real-time object detection using the Portland State Univerisy Recylcling Image Classification dataset which contained annotated images with bounding boxes for the trash object that we used to train Yolo v5. For adopting the model to distinguish between recycalable or not, we used the organic materials dataset out of Waste Classification v2 databank.
+
+
 ![yolo](./yolo.png)
 
 #### YOLO v5 Model Prototyping Notebook
