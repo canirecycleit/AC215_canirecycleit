@@ -104,7 +104,7 @@ EDA and model prototyping for Waste Classification can be found [here](../../not
 
 ### (YOLO) Mixed Trash
 
-Given we would like to provide object detection within a live video stream we also tested  real-time object detection using the Portland State Univerisy Recylcling Image Classification dataset which contained annotated images with bounding boxes for the trash object that we used to fine-tune Yolo v3.
+Given we would like to provide object detection within a live video stream we also tested  real-time object detection using the Portland State Univerisy Recylcling Image Classification dataset which contained annotated images with bounding boxes for the trash object that we used to fine-tune Yolo v5.
 ![yolo](./yolo.png)
 
 #### Model Prototyping Notebook
