@@ -102,11 +102,13 @@ Here is the loss and accuracy curve for the baseline Mobilenet architecture:
 
 EDA and model prototyping for Waste Classification can be found [here](../../notebooks/Waste_Classification_EDA.ipynb).
 
-### (YOLO) Mixed Trash
+### YOLO v5 for Identifying Recycalable Materials in a Live Stream
 
-Given we would like to provide object detection within a live video stream we also tested  real-time object detection using the Portland State Univerisy Recylcling Image Classification dataset which contained annotated images with bounding boxes for the trash object that we used to fine-tune Yolo v3.
+Given that we would like to provide a way to identify recycalable materials within a live video stream, we also tested real-time object detection using the Portland State Univerisy Recylcling Image Classification dataset which contained annotated images with bounding boxes for the trash object that we used to train Yolo v5. For adopting the model to distinguish between recycalable or not, we used the organic materials dataset out of Waste Classification v2 databank.
+
+
 ![yolo](./yolo.png)
 
-#### Model Prototyping Notebook
+#### YOLO v5 Model Prototyping Notebook
 
-Model prototyping for YOLO detection can be found [here](../../notebooks/yolov5_mixed_trash_data_training_predictions.ipynb).
+Model prototyping for YOLO detection can be found [here](../../notebooks/Object_detection.ipynb).
