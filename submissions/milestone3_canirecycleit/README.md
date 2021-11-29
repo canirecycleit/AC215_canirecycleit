@@ -16,7 +16,7 @@ Updated Project Outline can be found [here](https://docs.google.com/presentation
 
 An overview of the deployed architcture can be found in the [ciri_app/README](https://github.com/canirecycleit/ciri_app/blob/master/README.md)
 
-## Scripts and Screenshots of Kubernetes Deployment
+## Video Recording of Kubernetes Deployment
 
 * [K8s Cluster Provisioning](ciri_cluster_create.mp4)
 * [Application Deployment](ciri_app_deploy_k8s.mp4)
