@@ -20,3 +20,9 @@ An overview of the deployed architcture can be found in the [ciri_app/README](ht
 
 * [K8s Cluster Provisioning](ciri_cluster_create.mp4)
 * [Application Deployment](ciri_app_deploy_k8s.mp4)
+
+## Deployment Scripts
+
+* [Ansible - Cluster Provisioning](https://github.com/canirecycleit/ciri_app/blob/master/k8s_deployment/ansible/deploy-k8s-cluster.yml)
+* [GitHub Action - App Deployment](https://github.com/canirecycleit/ciri_app/blob/master/.github/workflows/deployment.yml)
+* [K8s Deployment Yamls](https://github.com/canirecycleit/ciri_app/tree/master/k8s_deployment/kompose)
