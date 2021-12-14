@@ -1,4 +1,4 @@
-# Milestone 3 Submission
+# Milestone 4 Submission
 
 ## Medium Blog Post
 
@@ -22,7 +22,7 @@ An overview of the deployed architcture can be found in the [ciri_app/README](ht
 
 ## Final Project Outline Recording and Demo
 
-* [Final Project Demo](final_project_demo.mp4)
+* [Final Project Demo](https://youtu.be/SZqCLXCcGDo)
 
 ## Video Recording of Kubernetes Deployment
 
